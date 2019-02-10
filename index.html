@@ -1,6 +1,716 @@
-<html>
-<head></head>
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>leo博客</title>
+  <link rel="shortcut icon" />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" />
+  <!-- Hover.css -->
+  <link rel="stylesheet" href="css/hover-min.css" />
+  <!-- Font Awesome -->
+
+  <!-- Owl Carousel -->
+  <link rel="stylesheet" href="css/owl.theme.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <!-- Addon Style -->
+  <link rel="stylesheet" href="css/style.css" media="screen" />
+  <!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+</head>
+
 <body>
-	第一个哈哈
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="loader">
+      <img src="img/cube.gif" alt="preload spinner">
+      <div class="pre-logo">
+        <h4>Cross.</h4>
+      </div>
+    </div>
+  </div>
+  <!-- End of preloader -->
+
+  <!-- Start wrapper as cross-portfolio -->
+  <div id="cross-portfolio" class="cross-portfolio">
+
+    <!-- Hamburger menu on scroll-->
+    <nav id="nav-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </nav>
+    <!-- end of hamburger -->
+
+    <!-- Overlay menu -->
+    <nav id="menu-overlay">
+      <ul id="menu" class="menu-click list-unstyled">
+        <li><a data-scroll href="#profile" class="smooth-scroll">TOP</a></li>
+        <li><a data-scroll href="#services" class="smooth-scroll">SERVICES</a></li>
+        <li><a data-scroll href="#portfolio" class="smooth-scroll">WORK</a></li>
+        <li><a data-scroll href="#resume" class="smooth-scroll">RESUME</a></li>
+        <li><a data-scroll href="#contact" class="smooth-scroll">CONTACT</a></li>
+      </ul>
+    </nav>
+    <!-- end of overlay menu -->
+
+    <!-- Start intro / background / big title -->
+    <div id="intro">
+
+      <!-- Background -->
+      <div class="bg">
+        <div class="bg-img">
+          <img src="img/bg1280x788.jpg" alt="Background Image" />
+        </div>
+      </div>
+      <!-- End of background -->
+
+      <!-- Top logo -->
+      <div class="cross-top">
+        <a href="index.html" class="logo"><span>Cross.</span></a>
+      </div>
+      <!-- End of top logo -->
+
+      <!-- The middle big title -->
+      <div class="big-title">
+        <div class="text-center">
+          <h1>LEO</h1>
+          <p>I'm <span class="sub-title"></span></p>
+        </div>
+      </div>
+      <!-- End of big title -->
+
+      <!-- Chevron arrow down button -->
+      <button class="trigger hvr-hang"><i class="fa fa-chevron-down"></i></button>
+
+    </div>
+    <!-- End of intro -->
+
+    <!-- Start of profile -->
+    <div id="profile" class="content">
+      <div class="containers">
+        <div class="row">
+          <div class="col-lg-12">
+
+            <!-- Title -->
+            <div class="title">
+              <h1>LEO</h1>
+              <span class="h4 element"></span>
+            </div>
+            <!-- End of title -->
+
+            <!-- About me -->
+            <div class="space">
+              <h3>LNMP</h3>
+              <p class="text-justify">
+				和LAMP不同的是LNMP中的N指的是Nginx（类似于Apache的一种web服务软件）其他都一样。目前这种环境应用的也是非常之多。Nginx设计的初衷是提供一种快速高效多并发的web服务软件。在静态页面的处理上Nginx的确胜Apache一筹，然而在动态页面的处理上Nginx并不比Apache有多少优势。但是，目前还是有很多爱好者对Nginx比较热衷，随着Nginx的技术逐渐成熟，它在web服务软件领域的地位越来越高。下边记录一下LNMP架构搭建的详细过程。
+				</p>
+			
+			<div id="post_detail">
+<div class="post">
+	<h1 class="postTitle"><a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/liwei0526vip/p/6433490.html">LNMP系统服务搭建过程详解</a></h1>
+	<div id="cnblogs_post_body" class="blogpost-body"><p><span style="font-family: 楷体; color: #888888; font-size: 16px;">&nbsp; &nbsp; 和LAMP不同的是LNMP中的N指的是Nginx（类似于Apache的一种web服务软件）其他都一样。目前这种环境应用的也是非常之多。Nginx设计的初衷是提供一种快速高效多并发的web服务软件。在静态页面的处理上Nginx的确胜Apache一筹，然而在动态页面的处理上Nginx并不比Apache有多少优势。但是，目前还是有很多爱好者对Nginx比较热衷，随着Nginx的技术逐渐成熟，它在web服务软件领域的地位越来越高。下边记录一下LNMP架构搭建的详细过程。</span></p>
+<h2 id="blogTitle0"><span style="font-family: 'courier new', courier;">一、MySQL数据库的安装</span></h2>
+<p><span style="font-family: 'courier new', courier;"><strong>1. 系统环境</strong></span></p>
+<p><span style="font-family: 'courier new', courier;">CentOS 6.4 x86_64 Mini 版本安装</span></p>
+<p><strong><span style="font-family: 'courier new', courier;">2. 基础软件包安装</span></strong></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">[root@vip ~]# yum install gcc vim make wget -y</span></pre>
+</div>
+<p><strong><span style="font-family: 'courier new', courier;">3. 下载</span></strong></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;"><span style="color: #888888;"># 进入源码存放目录</span>
+[root@vip ~]# cd /usr/local/src
+<span style="color: #888888;"># 下载MySQL安装包</span>
+[root@vip src]# wget downloads.mysql.com/archives/get/file/mysql-5.5.40-linux2.6-x86_64.tar.gz</span></pre>
+</div>
+<p><strong><span style="font-family: 'courier new', courier;">4. 解压安装</span></strong></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;"><span style="color: #888888;"># 解压</span>
+[root@vip src]# tar -zxf mysql-5.5.40-linux2.6-x86_64.tar.gz
+<span style="color: #888888;"># 设置安装路径</span>
+[root@vip src]# mv mysql-5.5.40-linux2.6-x86_64 /usr/local/mysql</span></pre>
+</div>
+<p><strong><span style="font-family: 'courier new', courier;">5. 建立MySQL用户</span></strong></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">[root@vip src]# useradd -s /sbin/nologin -M mysql</span></pre>
+</div>
+<p><strong><span style="font-family: 'courier new', courier;">6. 准备数据目录</span></strong></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;"><span style="color: #888888;"># 进入MySQL安装目录</span>
+[root@vip src]# cd /usr/local/mysql
+<span style="color: #888888;"># 创建MySQL数据目录</span>
+[root@vip mysql]# mkdir -p /var/lib/mysql
+<span style="color: #888888;"># 设置目录权限</span>
+[root@vip mysql]# chown -R mysql:mysql /var/lib/mysql</span></pre>
+</div>
+<p><strong><span style="font-family: 'courier new', courier;">7. 初始化数据库</span></strong></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">[root@vip mysql]# ./scripts/mysql_install_db --user=mysql --datadir=/var/lib/mysql
+when specifying MySQL privileges !
+Installing MySQL system tables...
+<strong>OK</strong>
+Filling help tables...
+<strong>OK  </strong>#看到2个OK说明初始化成功</span></pre>
+</div>
+<p><strong><span style="font-family: 'courier new', courier;">8. 拷贝配置文件</span></strong></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">[root@vip mysql]# /bin/cp support-files/my-large.cnf /etc/my.cnf</span></pre>
+</div>
+<p><strong><span style="font-family: 'courier new', courier;">9. 拷贝启动脚本</span></strong></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;"><span style="color: #888888;"># 拷贝启动脚本</span>
+[root@vip mysql]# /bin/cp support-files/mysql.server /etc/init.d/mysqld
+<span style="color: #888888;"># 赋予可执行权限</span>
+[root@vip mysql]# chmod 755 /etc/init.d/mysqld</span></pre>
+</div>
+<p><strong><span style="font-family: 'courier new', courier;">10. 修改启动脚本</span></strong></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">[root@vip mysql]# vim /etc/init.d/mysqld
+<span style="color: #888888;"># 修改设置内容如下</span>
+basedir=/usr/local/mysql
+datadir=/var/lib/mysql</span></pre>
+</div>
+<p><strong><span style="font-family: 'courier new', courier;">11. 把MySQL添加到服务</span></strong></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;"><span style="color: #888888;"># 添加到service列表</span>
+[root@vip mysql]# chkconfig --add mysqld
+<span style="color: #888888;"># 设置开机启动</span>
+[root@vip mysql]# chkconfig mysqld on</span></pre>
+</div>
+<p><strong><span style="font-family: 'courier new', courier;">12. 启动MySQL服务</span></strong></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">[root@vip mysql]# service mysqld start
+Starting MySQL... <strong>SUCCESS</strong>!</span></pre>
+</div>
+<p><strong><span style="font-family: 'courier new', courier;">13. 查看验证MySQL启动进程</span></strong></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">[root@vip mysql]# ps -e | grep mysql
+ 1830 pts/1    00:00:00 mysqld_safe
+ 2121 pts/1    00:00:00 mysqld</span></pre>
+</div>
+<p><strong><span style="font-family: 'courier new', courier;">14. 配置MySQL环境变量</span></strong></p>
+<p><span style="font-family: 'courier new', courier;">将 MySQL 客户端命令路径加入 PATH 环境变量中去。</span></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;"><span style="color: #888888;"># 设置PATH环境变量</span>
+[root@vip mysql]# echo 'export PATH=$PATH:/usr/local/mysql/bin' &gt; /etc/profile.d/mysql.sh
+[root@vip mysql]# source /etc/profile.d/mysql.sh</span></pre>
+</div>
+<p><strong><span style="font-family: 'courier new', courier;">15. 登录MySQL测试</span></strong></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">[root@vip mysql]# <strong>mysql</strong>    <span style="color: #888888;"># 默认没有密码</span>
+Your MySQL connection id is 1
+Server version: 5.5.40-log MySQL Community Server (GPL)
+Copyright (c) 2000, 2014, Oracle and/or its affiliates. All rights reserved.
+... ...
+mysql&gt;</span></pre>
+</div>
+<h2 id="blogTitle1"><span style="font-family: 'courier new', courier;">二、PHP服务安装</span></h2>
+<p><span style="font-family: 'courier new', courier;">说明下，针对Nginx的php安装和针对apache的php安装是有区别的，因为Nginx中的php是以fastcgi的方式结合nginx的。可以理解为nginx代理了php的fastcgi，而apache是把php最为自己的模块来调用的。</span></p>
+<p><strong><span style="font-family: 'courier new', courier;">1、下载解压php压缩包</span></strong></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">cd /usr/local/<span style="color: #000000;">src
+</span><span style="color: #0000ff;">wget</span> http:<span style="color: #008000;">//</span><span style="color: #008000;">cn2.php.net/get/php-5.5.38.tar.gz/from/this/mirror</span>
+<span style="color: #0000ff;">mv</span> mirror php-<span style="color: #800080;">5.5</span>.<span style="color: #800080;">38</span>.<span style="color: #0000ff;">tar</span><span style="color: #000000;">.gz
+</span><span style="color: #0000ff;">tar</span> zxf php-<span style="color: #800080;">5.5</span>.<span style="color: #800080;">38</span>.<span style="color: #0000ff;">tar</span>.gz</span></pre>
+</div>
+<p><strong><span style="font-family: 'courier new', courier;">2、创建php账号</span></strong></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">useradd -s /sbin/nologin php-fpm -M</span></pre>
+</div>
+<p><span style="font-family: 'courier new', courier;">该账号用来运行php-fpm服务，在LNMP环境中，php是以一个服务来提供服务的。</span></p>
+<p><strong><span style="font-family: 'courier new', courier;">3、配置编译选项</span></strong></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;"><span style="color: #0000ff;">yum</span> <span style="color: #0000ff;">install</span> -y libcurl-devel libtool-ltdl-<span style="color: #000000;">devel
+</span><span style="color: #0000ff;">yum</span> <span style="color: #0000ff;">install</span> -y pcre pcre-devel apr apr-devel zlib-devel <span style="color: #0000ff;">gcc</span> <span style="color: #0000ff;">make</span></span></pre>
+</div>
+<p><span style="font-family: 'courier new', courier;">配置编译选项：</span></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"> </a></span></div>
+<pre><span style="font-family: 'courier new', courier;"><strong>cd php-<span style="color: #800080;">5.5</span>.<span style="color: #800080;">38</span><span style="color: #000000;">
+.</span>/configure --prefix=/usr/local/<span style="color: #000000;">php \
+</span></strong>--with-config-<span style="color: #0000ff;">file</span>-path=/usr/local/php/<span style="color: #000000;">etc \
+</span>--enable-fpm --with-fpm-user=php-<span style="color: #000000;">fpm \
+</span>--with-fpm-group=php-fpm --with-mysql=/usr/local/<span style="color: #000000;">mysql \
+</span>--with-mysql-sock=/tmp/mysql.sock --with-libxml-<span style="color: #0000ff;">dir</span><span style="color: #000000;"> \
+</span>--with-gd --with-jpeg-<span style="color: #0000ff;">dir</span> --with-png-<span style="color: #0000ff;">dir</span> --with-freetype-<span style="color: #0000ff;">dir</span><span style="color: #000000;"> \
+</span>--with-iconv-<span style="color: #0000ff;">dir</span> --with-zlib-<span style="color: #0000ff;">dir</span> --with-mcrypt --enable-<span style="color: #000000;">soap \
+</span>--enable-gd-native-ttf --enable-<span style="color: #0000ff;">ftp</span> --enable-<span style="color: #000000;">mbstring \
+</span>--enable-exif --enable-zend-multibyte --disable-<span style="color: #000000;">ipv6 \
+</span>--with-pear --with-curl --with-openssl</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"> </a></span></div></div>
+<p><strong><span style="font-family: 'courier new', courier;">4、编译安装PHP</span></strong></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;"><span style="color: #0000ff;">make</span>
+<span style="color: #0000ff;">make</span> <span style="color: #0000ff;">install</span></span></pre>
+</div>
+<p><strong><span style="font-family: 'courier new', courier;">5、修改配置文件</span></strong></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;"><span style="color: #0000ff;">cp</span> php.ini-production /usr/local/php/etc/<span style="color: #000000;">php.ini
+</span><span style="color: #0000ff;">cp</span> /usr/local/php/etc/php-fpm.conf.default /usr/local/php/etc/php-<span style="color: #000000;">fpm.conf
+vim </span>/usr/local/php/etc/php-fpm.conf</span></pre>
+</div>
+<p><span style="font-family: 'courier new', courier;">把如下内容写入该文件<strong>:</strong></span></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"> </a></span></div>
+<pre><span style="font-family: 'courier new', courier;"><span style="color: #000000;">[global]
+pid </span>= /usr/local/php/var/run/php-<span style="color: #000000;">fpm.pid
+error_log </span>= /usr/local/php/var/log/php-<span style="color: #000000;">fpm.log
+[www]
+listen </span>= <span style="color: #800080;">127.0</span>.<span style="color: #800080;">0.1</span>:<span style="color: #800080;">9000</span><span style="color: #000000;">
+user </span>= php-<span style="color: #000000;">fpm
+group </span>= php-<span style="color: #000000;">fpm
+pm </span>=<span style="color: #000000;"> dynamic
+pm.max_children </span>= <span style="color: #800080;">50</span><span style="color: #000000;">
+pm.start_servers </span>= <span style="color: #800080;">20</span><span style="color: #000000;">
+pm.min_spare_servers </span>= <span style="color: #800080;">5</span><span style="color: #000000;">
+pm.max_spare_servers </span>= <span style="color: #800080;">35</span><span style="color: #000000;">
+pm.max_requests </span>= <span style="color: #800080;">500</span><span style="color: #000000;">
+rlimit_files </span>= <span style="color: #800080;">1024</span></span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"> </a></span></div></div>
+<p><span style="font-family: 'courier new', courier;">保存配置文件后，检验配置是否正确的方法为：</span></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">/usr/local/php/sbin/php-fpm -t</span></pre>
+</div>
+<p><strong><span style="font-family: 'courier new', courier;">6、启动php-fpm</span></strong></p>
+<p><span style="font-family: 'courier new', courier;">首先要拷贝一个启动脚本到/etc/init.d/下：</span></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;"><span style="color: #0000ff;">cp</span> /usr/local/src/php-<span style="color: #800080;">5.3</span>.<span style="color: #800080;">27</span>/sapi/fpm/init.d.php-fpm /etc/init.d/php-fpm</span></pre>
+</div>
+<p><span style="font-family: 'courier new', courier;">给它更改权限为755</span></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;"><span style="color: #0000ff;">chmod</span> <span style="color: #800080;">755</span> /etc/init.d/php-<span style="color: #000000;">fpm
+chkconfig </span>--add php-<span style="color: #000000;">fpm
+service php</span>-fpm start</span></pre>
+</div>
+<p><span style="font-family: 'courier new', courier;">设置开机启动，执行：</span></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">chkconfig php-fpm on</span></pre>
+</div>
+<p><span style="font-family: 'courier new', courier;">检测是否启动</span></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;"><span style="color: #0000ff;">ps</span> aux | <span style="color: #0000ff;">grep</span> php-fpm</span></pre>
+</div>
+<h2 id="blogTitle2"><span lang="EN-US">三、Nginx编译安装</span></h2>
+<p><strong><span lang="EN-US">1、下载、解压Nginx</span></strong></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">cd /usr/local/<span style="color: #000000;">src
+</span><span style="color: #0000ff;">wget</span> http:<span style="color: #008000;">//</span><span style="color: #008000;">nginx.org/download/nginx-1.8.0.tar.gz</span>
+<span style="color: #0000ff;">tar</span> zxvf nginx-<span style="color: #800080;">1.8</span>.<span style="color: #800080;">0</span>.<span style="color: #0000ff;">tar</span>.gz</span></pre>
+</div>
+<p><strong><span style="font-family: 'courier new', courier;">2、配置编译选项</span></strong></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;"><strong>cd nginx-<span style="color: #800080;">1.8</span>.<span style="color: #800080;">0</span><span style="color: #000000;">
+.</span>/configure --prefix=/usr/local/<span style="color: #000000;">nginx \
+</span></strong>--with-http_realip_module --with-<span style="color: #000000;">http_sub_module \
+</span>--with-<span style="color: #000000;">http_gzip_static_module \
+</span>--with-http_stub_status_module --with-pcre</span></pre>
+</div>
+<p><strong><span style="font-family: 'courier new', courier;">3、编译安装Nginx</span></strong></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;"><span style="color: #0000ff;">make</span>
+<span style="color: #0000ff;">make</span> <span style="color: #0000ff;">install</span></span></pre>
+</div>
+<p><strong><span style="font-family: 'courier new', courier;">4、启动nginx</span></strong></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">/usr/local/nginx/sbin/nginx</span></pre>
+</div>
+<p><span style="font-family: 'courier new', courier;">检查nginx是否启动：</span></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;"><span style="color: #0000ff;">ps</span> aux | <span style="color: #0000ff;">grep</span> nginx</span></pre>
+</div>
+<h2 id="blogTitle3"><span style="font-family: 'courier new', courier;">四、测试PHP解析</span></h2>
+<p><span style="font-family: 'courier new', courier;"><span style="font-size: 10pt; color: #383838;">首先配置</span><span style="font-size: 10pt; color: #383838;" lang="EN-US"> nginx </span><span style="font-size: 10pt; color: #383838;">配置文件，使其能够支持</span><span style="font-size: 10pt; color: #383838;" lang="EN-US">php</span><span style="font-size: 10pt; color: #383838;">。</span></span></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">vim /usr/local/nginx/conf/nginx.conf</span></pre>
+</div>
+<p><span style="font-size: 10pt; font-family: 'courier new', courier;">找到：</span></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">location = /<span style="color: #000000;">50x.html {
+    root html;
+}</span></span></pre>
+</div>
+<p><span style="font-size: 10pt; font-family: 'courier new', courier;">在其后面增加如下配置：</span></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"> </a></span></div>
+<pre><span style="font-family: 'courier new', courier;">location ~<span style="color: #000000;"> \.php$ {
+    root html;
+    fastcgi_pass </span><span style="color: #800080;">127.0</span>.<span style="color: #800080;">0.1</span>:<span style="color: #800080;">9000</span><span style="color: #000000;">;
+    fastcgi_index index.php;
+    fastcgi_param SCRIPT_FILENAME </span>/usr/local/nginx/<span style="color: #000000;">html$fastcgi_script_name;
+    include fastcgi_params;
+}</span></span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"> </a></span></div></div>
+<p><span style="font-size: 10pt; font-family: 'courier new', courier;">重新加载：</span></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">/usr/local/nginx/sbin/nginx -s reload</span></pre>
+</div>
+<p><span style="font-family: 'courier new', courier;"><span style="font-size: 10pt;">创建测试文件</span><strong><span style="font-size: 10pt; color: #804000;" lang="EN-US">:</span></strong></span></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">vim /usr/local/nginx/html/<span style="color: #800080;">2</span><span style="color: #000000;">.php
+</span>&lt;?<span style="color: #000000;">php
+    </span><span style="color: #0000ff;">echo</span> <span style="color: #800000;">"</span><span style="color: #800000;">test php scripts.</span><span style="color: #800000;">"</span><span style="color: #000000;">;
+</span>?&gt;</span></pre>
+</div>
+<p><span style="font-family: 'courier new', courier;"><span style="font-size: 10pt;">测试</span><strong><span style="font-size: 10pt; color: #804000;" lang="EN-US">:</span></strong></span></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">curl localhost/<span style="color: #800080;">2</span><span style="color: #000000;">.php
+test php scripts.</span></span></pre>
+</div>
+<p><span style="font-family: 'courier new', courier;"><span style="font-size: 10pt;">显示成这样，才说明</span><span style="font-size: 10pt;" lang="EN-US"> PHP </span><span style="font-size: 10pt;">解析正常。</span></span></p>
+<h2 id="blogTitle4">五、Nginx启动脚本和配置文件</h2>
+<p><strong>1、编写启动脚本并加入系统服务</strong></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">vim /etc/init.d/nginx</span></pre>
+</div>
+<p><span style="font-size: 10pt; font-family: 'courier new', courier; color: #383838;">写入如下内容：</span></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"> </a></span></div>
+<pre><span style="font-family: 'courier new', courier;">#!/bin/<span style="color: #000000;">bash
+# chkconfig: </span>- <span style="color: #800080;">30</span> <span style="color: #800080;">21</span><span style="color: #000000;">
+# description: http service.
+# Source Function Library
+. </span>/etc/init.d/<span style="color: #000000;">functions
+# Nginx Settings
+
+NGINX_SBIN</span>=<span style="color: #800000;">"</span><span style="color: #800000;">/usr/local/nginx/sbin/nginx</span><span style="color: #800000;">"</span><span style="color: #000000;">
+NGINX_CONF</span>=<span style="color: #800000;">"</span><span style="color: #800000;">/usr/local/nginx/conf/nginx.conf</span><span style="color: #800000;">"</span><span style="color: #000000;">
+NGINX_PID</span>=<span style="color: #800000;">"</span><span style="color: #800000;">/usr/local/nginx/logs/nginx.pid</span><span style="color: #800000;">"</span><span style="color: #000000;">
+RETVAL</span>=<span style="color: #800080;">0</span><span style="color: #000000;">
+prog</span>=<span style="color: #800000;">"</span><span style="color: #800000;">Nginx</span><span style="color: #800000;">"</span><span style="color: #000000;">
+
+start() {
+        </span><span style="color: #0000ff;">echo</span> -n $<span style="color: #800000;">"</span><span style="color: #800000;">Starting $prog: </span><span style="color: #800000;">"</span>
+        <span style="color: #0000ff;">mkdir</span> -p /dev/shm/<span style="color: #000000;">nginx_temp
+        daemon $NGINX_SBIN </span>-<span style="color: #000000;">c $NGINX_CONF
+        RETVAL</span>=$?
+        <span style="color: #0000ff;">echo</span><span style="color: #000000;">
+        return $RETVAL
+}
+
+stop() {
+        </span><span style="color: #0000ff;">echo</span> -n $<span style="color: #800000;">"</span><span style="color: #800000;">Stopping $prog: </span><span style="color: #800000;">"</span><span style="color: #000000;">
+        killproc </span>-p $NGINX_PID $NGINX_SBIN -<span style="color: #000000;">TERM
+        </span><span style="color: #0000ff;">rm</span> -rf /dev/shm/<span style="color: #000000;">nginx_temp
+        RETVAL</span>=$?
+        <span style="color: #0000ff;">echo</span><span style="color: #000000;">
+        return $RETVAL
+}
+
+reload(){
+        </span><span style="color: #0000ff;">echo</span> -n $<span style="color: #800000;">"</span><span style="color: #800000;">Reloading $prog: </span><span style="color: #800000;">"</span><span style="color: #000000;">
+        killproc </span>-p $NGINX_PID $NGINX_SBIN -<span style="color: #000000;">HUP
+        RETVAL</span>=$?
+        <span style="color: #0000ff;">echo</span><span style="color: #000000;">
+        return $RETVAL
+}
+
+restart(){
+        stop
+        start
+}
+
+configtest(){
+    $NGINX_SBIN </span>-c $NGINX_CONF -<span style="color: #000000;">t
+    return </span><span style="color: #800080;">0</span><span style="color: #000000;">
+}
+
+</span><span style="color: #0000ff;">case</span> <span style="color: #800000;">"</span><span style="color: #800000;">$1</span><span style="color: #800000;">"</span> <span style="color: #0000ff;">in</span><span style="color: #000000;">
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  reload)
+        reload
+        ;;
+  restart)
+        restart
+        ;;
+  configtest)
+        configtest
+        ;;
+  </span>*<span style="color: #000000;">)
+        </span><span style="color: #0000ff;">echo</span> $<span style="color: #800000;">"</span><span style="color: #800000;">Usage: $0 {start|stop|reload|restart|configtest}</span><span style="color: #800000;">"</span><span style="color: #000000;">
+        RETVAL</span>=<span style="color: #800080;">1</span>
+<span style="color: #0000ff;">esac</span><span style="color: #000000;">
+
+exit $RETVAL</span></span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"> </a></span></div></div>
+<p>保存后，更改权限：</p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;"><span style="color: #0000ff;">chmod</span> <span style="color: #800080;">755</span> /etc/init.d/<span style="color: #000000;">nginx
+chkconfig </span>--<span style="color: #000000;">add nginx
+chkconfig nginx on</span></span></pre>
+</div>
+<p><strong><span style="font-family: 'courier new', courier;">2、<span style="font-size: 10.5pt;">更改整理</span><span style="font-size: 10.5pt;" lang="EN-US">nginx</span><span style="font-size: 10.5pt;">配置</span></span></strong></p>
+<p>首先清空原来的配置文件：</p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">&gt; /usr/local/nginx/conf/<span style="color: #000000;">nginx.conf
+<span style="color: #808080;">快速清空文档。</span></span></span></pre>
+</div>
+<p>编辑文件写入如下内容：</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"> </a></span></div>
+<pre><span style="font-family: 'courier new', courier;"><span style="color: #808080;"><strong># vim /usr/local/nginx/conf/</strong></span><span style="color: #000000;"><span style="color: #808080;"><strong>nginx.conf</strong></span>
+
+user nobody nobody;
+worker_processes </span><span style="color: #800080;">2</span><span style="color: #000000;">;
+error_log </span>/usr/local/nginx/logs/<span style="color: #000000;">nginx_error.log crit;
+pid </span>/usr/local/nginx/logs/<span style="color: #000000;">nginx.pid;
+worker_rlimit_nofile </span><span style="color: #800080;">51200</span><span style="color: #000000;">;
+
+events
+{   
+    use epoll;
+    worker_connections </span><span style="color: #800080;">6000</span><span style="color: #000000;">;
+}
+
+http
+{
+    include mime.types;
+    default_type application</span>/octet-<span style="color: #000000;">stream;
+    server_names_hash_bucket_size </span><span style="color: #800080;">3526</span><span style="color: #000000;">;
+    server_names_hash_max_size </span><span style="color: #800080;">4096</span><span style="color: #000000;">;
+    log_format combined_realip </span><span style="color: #800000;">'</span><span style="color: #800000;">$remote_addr $http_x_forwarded_for [$time_local]</span><span style="color: #800000;">'</span>
+    <span style="color: #800000;">'</span><span style="color: #800000;">$host "$request_uri" $status</span><span style="color: #800000;">'</span>
+    <span style="color: #800000;">'</span><span style="color: #800000;">"$http_referer" "$http_user_agent"</span><span style="color: #800000;">'</span><span style="color: #000000;">;
+    sendfile on; 
+    tcp_nopush on; 
+    keepalive_timeout </span><span style="color: #800080;">30</span><span style="color: #000000;">; 
+    client_header_timeout 3m; 
+    client_body_timeout 3m; 
+    send_timeout 3m; 
+    connection_pool_size </span><span style="color: #800080;">256</span><span style="color: #000000;">;
+    client_header_buffer_size 1k; 
+    large_client_header_buffers </span><span style="color: #800080;">8</span><span style="color: #000000;"> 4k; 
+    request_pool_size 4k; 
+    output_buffers </span><span style="color: #800080;">4</span><span style="color: #000000;"> 32k;
+    postpone_output </span><span style="color: #800080;">1460</span><span style="color: #000000;">;
+    client_max_body_size 10m;
+    client_body_buffer_size 256k;
+    client_body_temp_path </span>/usr/local/nginx/<span style="color: #000000;">client_body_temp;
+    proxy_temp_path </span>/usr/local/nginx/<span style="color: #000000;">proxy_temp;
+    fastcgi_temp_path </span>/usr/local/nginx/<span style="color: #000000;">fastcgi_temp;
+    fastcgi_intercept_errors on;
+    tcp_nodelay on;
+    </span><span style="color: #0000ff;">gzip</span><span style="color: #000000;"> on;
+    gzip_min_length 1k;
+    gzip_buffers </span><span style="color: #800080;">4</span><span style="color: #000000;"> 8k;
+    gzip_comp_level </span><span style="color: #800080;">5</span><span style="color: #000000;">;
+    gzip_http_version </span><span style="color: #800080;">1.1</span><span style="color: #000000;">;
+    gzip_types text</span>/plain application/x-javascript text/css text/htm application/<span style="color: #000000;">xml;
+
+    include vhosts</span><span style="color: #008000;">/*</span><span style="color: #008000;">.conf;
+}</span></span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"> </a></span></div></div>
+<p><span style="font-family: 'courier new', courier;">继续如下操作：</span></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">cd /usr/local/nginx/<span style="color: #000000;">conf
+</span><span style="color: #0000ff;">mkdir</span><span style="color: #000000;"> vhosts
+cd vhosts
+vim default.conf</span></span></pre>
+</div>
+<p><span style="font-family: 'courier new', courier;">写入如下内容：</span></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"> </a></span></div>
+<pre><span style="font-family: 'courier new', courier;"><span style="color: #000000;">server
+{
+    listen </span><span style="color: #800080;">80</span><span style="color: #000000;"> default;
+    server_name localhost;
+    index index.html index.htm index.php;
+    root </span>/tmp/<span style="color: #800080;">1233</span><span style="color: #000000;">;
+    deny all;
+}</span></span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"> </a></span></div></div>
+<p><span style="font-family: 'courier new', courier;">编辑<span style="font-size: 10pt;">www.123.com.conf文件，写入如下内容：</span></span></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"> </a></span></div>
+<pre><span style="font-family: 'courier new', courier;"><span style="color: #000000;">server
+{
+    listen </span><span style="color: #800080;">80</span><span style="color: #000000;">; 
+    server_name www.</span><span style="color: #800080;">123</span><span style="color: #000000;">.com;
+    index index.html index.htm index.php;
+    root </span>/usr/local/apache2/<span style="color: #000000;">htdocs;
+
+    location </span>~<span style="color: #000000;"> \.php$ {
+        include fastcgi_params;
+        #fastcgi_pass unix:</span>/tmp/php-<span style="color: #000000;">fcgi.sock;
+        fastcgi_pass </span><span style="color: #800080;">127.0</span>.<span style="color: #800080;">0.1</span>:<span style="color: #800080;">9000</span><span style="color: #000000;">;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME </span>/usr/local/apache2/<span style="color: #000000;">htdocs$fastcgi_script_name;
+    }   
+}</span></span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"> </a></span></div></div>
+<p>保存配置后，先检验一下配置文件是否有错误存在：</p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">/usr/local/nginx/sbin/nginx -t</span></pre>
+</div>
+<p>启动<span lang="EN-US">nginx</span>服务：</p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">service nginx start</span></pre>
+</div>
+<p>查看是否有进程：</p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;"><span style="color: #0000ff;">ps</span> aux | <span style="color: #0000ff;">grep</span> nginx</span></pre>
+</div>
+<h2 id="blogTitle5"><span style="font-family: 'courier new', courier;">六、php-fpm配置文件</span></h2>
+<p><span style="font-family: 'courier new', courier;">清空原始配置文件：</span></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">&gt; /usr/local/php/etc/php-fpm.conf</span></pre>
+</div>
+<p><span style="font-family: 'courier new', courier;">编辑配置文件：</span></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">vim /usr/local/php/etc/php-fpm.conf</span></pre>
+</div>
+<p><span style="font-family: 'courier new', courier;">写入如下内容：</span></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"> </a></span></div>
+<pre><span style="font-family: 'courier new', courier;"><span style="color: #000000;">[global]
+pid </span>= /usr/local/php/var/run/php-<span style="color: #000000;">fpm.pid
+error_log </span>= /usr/local/php/var/log/php-<span style="color: #000000;">fpm.log
+[www]
+listen </span>= <span style="color: #800080;">127.0</span>.<span style="color: #800080;">0.1</span>:<span style="color: #800080;">9000</span><span style="color: #000000;">
+user </span>= php-<span style="color: #000000;">fpm
+group </span>= php-<span style="color: #000000;">fpm
+listen.owner </span>=<span style="color: #000000;"> nobody
+listen.group </span>=<span style="color: #000000;"> nobody
+pm </span>=<span style="color: #000000;"> dynamic
+pm.max_children </span>= <span style="color: #800080;">50</span><span style="color: #000000;">
+pm.start_servers </span>= <span style="color: #800080;">20</span><span style="color: #000000;">
+pm.min_spare_servers </span>= <span style="color: #800080;">5</span><span style="color: #000000;"> 
+pm.max_spare_servers </span>= <span style="color: #800080;">35</span><span style="color: #000000;">
+pm.max_requests </span>= <span style="color: #800080;">500</span><span style="color: #000000;"> 
+rlimit_files </span>= <span style="color: #800080;">1024</span></span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"> </a></span></div></div>
+<p><span style="font-family: 'Microsoft YaHei';">配置说明：</span></p>
+<p><span style="font-family: 'courier new', courier;">global部分是全局配置，指定pid文件路径以及error_log路径。<br></span><span style="font-family: 'courier new', courier;">[www]是一个pool，其实还可以再写第二个pool，第二个pool和第一个不一样的地方，首先pool的name，比如叫做[www2]。然后listen肯定就不能一样了，比如可以listen=/tmp/php-fcgi2.sock。而user，group也可以和[www]中定义的不一样。listen.owner这个是定义/tmp/php-fcgi.sock这个文件的所有者是谁，在php5.4版本之后监听的socket文件权限默认变成了 rw-------，如果不定义listen.owner那么nginx调用这个socket的时候就没有权限了，故在这里我们定义listen.owner为nginx的子进程监听用户。</span></p>
+<p><span style="font-family: 'courier new', courier;"><strong>pm = dynamic</strong> 表示以动态的形式启动，在php5.3 版本以后它可以支持动态和静态了，如果是静态，即 pm=static时，下面的配置只有pm.max_children管用。<br></span><span style="font-family: 'courier new', courier;"><strong>pm.max_children</strong> 表示启动几个 php-fpm 的子进程。如果是 dynamic，下面的配置会生效，pm.max_children 表示最大可以启动几个子进程。<br></span><span style="font-family: 'courier new', courier;"><strong>pm.start_servers</strong> 表示一开始启动几个子进程。<br></span><span style="font-family: 'courier new', courier;"><strong>pm.min_spare_servers</strong> 表示当 php-fpm 空闲时最少要有几个子进程，即如果空闲进程小于此值，则创建新的子进程。pm.max_spare_server 表示当 <strong>php-fpm</strong> 空闲时最多有几个子进程，即如果空闲进程大于此值，则会进行清理。<br></span><span style="font-family: 'courier new', courier;"><strong>pm.max_requests</strong> 表示一个子进程最多可以接受多少个请求，比如设置为 500 那么一个子进程受理 500 个请求后自动销毁。<br></span><span style="font-family: 'courier new', courier;"><strong>rlimit_files</strong> 表示每个子进程打开的多少个文件句柄。</span></p>
+<h2 id="blogTitle6"><span style="font-family: 'courier new', courier;">七、常见的502错误问题</span></h2>
+<p><span style="font-family: 'courier new', courier;"><strong>1、配置错误</strong></span></p>
+<p><span style="font-family: 'courier new', courier;">因为nginx找不到php-fpm了，所以报错，一般是fastcgi_pass后面的路径配置错误了，后面可以是socket或者是127.0.0.1:900。要注意与php-fpm.conf配置文件中[listen]字段值保持一致。</span></p>
+<p><span style="font-family: 'courier new', courier;"><strong>2、资源耗尽</strong></span></p>
+<p><span style="font-family: 'courier new', courier;">lnmp架构在处理php时，nginx直接调取后端的php-fpm服务，如果nginx的请求量偏高，我们又没有给php-fpm配置足够的子进程，那么php-fpm就会资源耗尽，一旦资源耗尽nginx找不到php-fpm就会出现502错误？？</span></p>
+<p class="a"><span style="color: #888888; font-family: 'courier new', courier;">解决方案：</span><br><span style="font-family: 'courier new', courier;">去调整php-fpm.conf中的pm.max_children数值，使其增加，但是也不能无限增加，毕竟资源有限，一般4G内存机器如果跑php-fpm和nginx，不跑mysql可以设置为150，8G为300以此类推</span></p>
+<p><span style="font-family: 'courier new', courier;"><strong>3、其它原因</strong></span></p>
+<p><span style="font-family: 'courier new', courier;">除了上面的两种错误还有其他的原因，很少有，我们可以借助nginx的错误日志来进行排查vim /usr/local/nginx/logs/nginx_error.log&nbsp; 我们也可以给日志定义级别vim/usr/local/nginx/conf/nginx.conf 找到error_log，默认是crit最严谨的就行，也可以改成debug显示的信息最全面，但是很容易撑爆我们的磁盘。检查nginx是以哪个用户身份运行</span></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;"><strong><span style="color: #0000ff;">ps</span> aux | <span style="color: #0000ff;">grep</span><span style="color: #000000;"> nginx
+vim </span>/usr/local/php/etc/php-</strong><span style="color: #000000;"><strong>fpm.conf</strong>
+[www]
+listen.owner </span>=<span style="color: #000000;"> nobody
+listen.group </span>= nobody</span></pre>
+</div>
+<p><span style="font-family: 'courier new', courier;">使用<span style="color: #888888;">版本高于5.4</span>(含5.4)，默认监听的sock文件权限是所有者只读，用户组和其它用户没有任何权限。所以nginx的启动用户nobody没有办法读这个socket文件，最终导致502，这个问题可以在nginx的错误日志中发现。解决办法很简单，上面给出的配置文件就有避免这个问题的配置。</span></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">listen.owner = nobody    <span style="color: #008000;">//</span><span style="color: #008000;">定义属主</span>
+listen.group = nobody    <span style="color: #008000;">//</span><span style="color: #008000;">定义属组</span></span></pre>
+</div>
+<p align="left"><span style="font-family: 'courier new', courier;">这两个配置就是定义socket的属主和属组是谁。除了这个还有一种方法这样nobody也可以有读取权限了。</span></p>
+<div class="cnblogs_code">
+<pre><span style="font-family: 'courier new', courier;">listen.mode = <span style="color: #800080;">777</span></span></pre>
+</div>
+<p>&nbsp;</p></div>
+</div>
+			
+            </div>
+            <!-- End of about me -->
+          </div>
+
+          <!-- End of skills / expertise -->
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end containers -->
+    </div>
+    <!-- end profile -->
+	
+    <!-- Start footer -->
+    <div id="footer" class="content">
+      <div class="containers">
+        <div class="row">
+
+          <div class="col-md-12 text-center">
+            <a href="index.html" class="footer-logo"><span>Cross.</span></a>
+            <!--<ul class="social">
+              <li class="hvr-grow"><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li class="hvr-grow"><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li class="hvr-grow"><a href="#"><i class="fa fa-github"></i></a></li>
+              <li class="hvr-grow"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li class="hvr-grow"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+            </ul>-->
+            <p><a href="http://www.cssmoban.com/" target="_blank" title="javascript:void(0);"></a></p>
+          </div>
+
+        </div>
+        <!-- row -->
+      </div>
+      <!-- containers -->
+    </div>
+    <!-- End of footer -->
+
+  </div>
+  <!-- end cross portfolio -->
+
+  <!-- Fullscreen Modal -->
+  <div class="modal fade fullscreen" id="projectModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- modal button close -->
+					<a href="#" class="close" data-dismiss="modal"><i class="fa fa-times"></i></a>
+				</div>
+
+        <div class="modal-body">
+          <div class="row">
+
+            <div class="col-md-8 col-md-offset-2">
+
+              
+            </div>
+            <!-- col-md-8 -->
+          </div>
+          <!-- row -->
+        </div>
+        <!-- modal body -->
+      </div>
+      <!-- modal-content -->
+    </div>
+    <!-- modal-dialog -->
+  </div>
+  <!-- fullscreen -->
+
+  <!--Script -->
+
+  <!-- Jquery v1.12.0 -->
+  <script src="js/jquery.min.js"></script>
+  <!--Bootstrap Js-->
+  <script src="js/bootstrap.min.js"></script>
+  <!--Classie js -->
+  <script src="js/classie.min.js"></script>
+  <!--Typed js -->
+  <script src="js/typed.min.js"></script>
+  <!-- OwlCarousel -->
+  <script src="js/owl.carousel.min.js"></script>
+  <!-- Google maps -->
+  <!---<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false&amp;language=en"></script>--->
+  <!-- Mobile map for google -->
+  <script src="js/jquery.mobilegmap.min.js"></script>
+  <!-- Waypoints -->
+  <script src="js/jquery.waypoints.min.js"></script>
+  <!-- ScrollReveal -->
+  <script src="js/scrollreveal.min.js"></script>
+  <!-- CountTo -->
+  <script src="js/jquery.countTo.min.js"></script>
+  <!-- SmoothScroll -->
+  <script src="js/smooth-scroll.min.js"></script>
+  <!-- Custom js -->
+  <script src="js/main.js"></script>
+
+  <!-- end script -->
 </body>
+
 </html>
+
